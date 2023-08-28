@@ -11,7 +11,7 @@ def solution(n):
 
     # 각 자릿수를 정수로 변환하고 합을 계산합니다.
     digit_sum = sum(int(digit) for digit in digits)
-
+      #리스트 내 각 숫자 자릿수를 정수로 변환해서 모두 더한 값을 digits_sum 변수에 저장
     # 계산된 자릿수 합을 반환합니다.
     return digit_sum
 
@@ -30,3 +30,16 @@ try:
 except ValueError:
     # 입력 값이 유효한 자연수가 아닌 경우 에러 메시지를 출력합니다.
     print("유효한 자연수를 입력해주세요.")
+
+
+# def solution(n):
+#     digits = list(str(n))
+#
+#     digits_sum = sum(int(digit) for digit in digits)
+#
+#     return digits_sum
+#
+# user_input = input("put ")
+# num = int(user_input)
+# result = solution(num)
+# print(result)

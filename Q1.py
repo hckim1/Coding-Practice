@@ -30,3 +30,14 @@ except ValueError:
     print("유효한 정수를 입력해주세요.")
 
 
+def solution(num):
+    if num & 2 == 0:
+        return "짝수"
+    else:
+        return "홀수"
+
+user = input("정수를 입력")
+num = int(user)
+result = solution(num)
+
+print (result)

@@ -30,18 +30,18 @@ print(f"n을 x로 나눈 나머지가 1이 되는 가장 작은 자연수 x: {re
 # 그래서 x의 시작 값을 n+1로 설정하여 range(n+1, ...) 범위에서 검사하게 됩니다.
 # 이렇게 하면 x가 n 이상이기 때문에 n을 나눈 나머지가 1이 되는 경우를 찾을 수 있습니다.
 
-def solution(n):
-    x = n + 1  # n보다 큰 값부터 시작
-
-    while True:
-        if x % n == 1:  # x를 n으로 나눈 나머지가 1이면
-            return x  # x를 반환
-        x += 1  # 다음 숫자로 계속 진행
-
-
-# 테스트
-n = 7
-print(solution(n))  # 출력: 4
+# def solution(n):
+#     x = n + 1  # n보다 큰 값부터 시작
+#
+#     while True:
+#         if x % n == 1:  # x를 n으로 나눈 나머지가 1이면
+#             return x  # x를 반환
+#         x += 1  # 다음 숫자로 계속 진행
+#
+#
+# # 테스트
+# n = 7
+# print(solution(n))  # 출력: 4
 
 # range를 사용한 방식:
 #

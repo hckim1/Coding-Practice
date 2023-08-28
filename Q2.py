@@ -21,3 +21,13 @@ try:
 
 except ValueError:
     print("유효한 숫자를 입력하시오.")
+
+
+def findaverage(arr):
+    result = sum(arr) / len(arr)
+    return result
+
+user_input = input("put ")
+user_list = user_input.split(",")
+user_list = [int(item) for item in user_list]
+average = solution(user_list)
