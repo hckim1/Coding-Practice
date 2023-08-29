@@ -7,6 +7,7 @@
 
 def solution(arr):
     result = sum(arr) / len(arr)
+    #arr의 모든 요소의합을 구한후, 리스트의 길이로 나누기
     return result
 
 # 사용자로부터 숫자들을 공백으로 구분하여 입력 받기
@@ -28,6 +29,5 @@ def findaverage(arr):
     return result
 
 user_input = input("put ")
-user_list = user_input.split(",")
-user_list = [int(item) for item in user_list]
+user_list = [int(item) for item in user_input.split(",")]
 average = solution(user_list)

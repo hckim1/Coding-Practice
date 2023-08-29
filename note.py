@@ -1,14 +1,36 @@
+class PostNode:
+    def __init__(self, title, content):
+        self.title = title
+        self.content = content
+        self.next = None
 
-# 찾고자 하는 값과 리스트에서 어느 인덱스에 위치하는지 찾는것이 목표
-# 정의 바이너리(매계변수리스트, 입렵값)
-    #탐색 범위의 왼쪽끝과 오른쪽을 설정
-    #왼쪽끝이 오른쪽끝보다 작거나 같음을 반복하고
-        #탐색 범위의 중간 인덱스를 계산
-        #만약 리스트의 중간값이 찾고자하는 값과 같다면
-            #중간 인덱스를 반환
-        #혹은 작다면 왼쪽 범위를 중간값 다음부터 오른쪽 끝까지로 조정
-        #아니면
-            #오른쪽 범위를 중간값 전으로 조정
-    #반복을 모두 돌았는데 찾지못하면 반환
-#결과는 정의 바이너리(매계변수리스트, 입렵값)
-#만약 결과값이 -1이 아니라면 프린트
+class PostList:
+    def __init__(self):
+        self.head = None
+
+    def add_post(self, title, content):
+        new_post = PostNode(title, content)
+        if not self.head:
+            self.head = new_post
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = new_post
+
+    def display_posts(self):
+        current = self.head
+        while current:
+            print("Title:", current.title)
+            print("Content:", current.content)
+            print("---------------------")
+            current = current.next
+
+# Create a post list and add some posts
+post_list = PostList()
+post_list.add_post("Hello World", "This is my first post.")
+post_list.add_post("Python Tips", "Here are some Python programming tips.")
+post_list.add_post("Kivy Tutorial", "Learn how to create interactive apps with Kivy.")
+
+# Display all posts
+post_list.display_posts()
